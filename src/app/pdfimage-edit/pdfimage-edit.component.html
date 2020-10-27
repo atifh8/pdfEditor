@@ -6,9 +6,9 @@
     <div class="inner">
         <mat-spinner diameter="50" style="margin:0 auto;"></mat-spinner>
     </div>
-  </div>
+</div>
 
-<div class="row">
+<!-- <div class="row">
             <div class="leftside">
                 <maphilight id="image" [config]="mapHigtlightConfig">
                      <img [src]="image" alt="" usemap="#workmap"  />
@@ -17,5 +17,23 @@
                     </map>
                 </maphilight>
             </div>
-</div> 
+</div>  -->
 
+<div fxFlex="60%">
+    <mat-card class='mat-card'>
+
+        <mat-card-header>
+            <div id="displayTinymce">
+                <div id="mymce1"></div>
+            </div>
+        </mat-card-header>
+
+        <maphilight id="image" [config]="mapHigtlightConfig">
+            <img mat-card-image [src]="image" alt="" usemap="#workmap" />
+            <map name="workmap">
+                <area *ngFor="let obj of mapCooridinate" shape="rect" coords='{{obj.coordi}}' title={{obj.name}} alt="#"
+                    (click)=Clicked($event,obj) />
+            </map>
+        </maphilight>
+    </mat-card>
+</div>

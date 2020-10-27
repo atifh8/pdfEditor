@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   form: FormGroup;
+  loading = false;
   public loginInvalid: boolean;
   errorMessage: string = null;
   constructor(private fb: FormBuilder, private rs: RegisterService, private router: Router) {
@@ -23,6 +24,7 @@ export class LoginComponent implements OnInit {
     });
   }
   onSubmit() {
+    this.loading = true;
     console.log('submit works', this.form.value)
     this.loginInvalid = false;
     console.log('first');
@@ -32,10 +34,12 @@ export class LoginComponent implements OnInit {
       console.log('second');
       this.rs.onSignIn(username, password).subscribe(res => { // moked jest.spyon
         console.log('login res', res)
+        this.loading = false;
         this.router.navigate(['./carriers'])                    // test router path after 
 
         this.form.reset();
       }, errorMessage => {
+        this.loading = false;
         console.log('the message is ', errorMessage)
         this.errorMessage = errorMessage
       })

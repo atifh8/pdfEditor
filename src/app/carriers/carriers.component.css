@@ -1,0 +1,115 @@
+
+body {
+    font-family: 'Covered By Your Grace', cursive;
+    line-height: 1.25;
+    
+    
+  }
+  .mat-spinner {
+    position: relative;
+    margin-left: 50%;
+    margin-right: 50%;
+}
+.highlight{
+  background: 	#D3D3D3; /* gray*/
+}
+.img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 360px;
+  height: auto;
+  align-items: center;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.green-icon {
+  color:#c70039;
+  align-items: center;
+  margin-left: 8px;
+ width: fit-content;
+}
+.blue-icon{
+  color: blue;
+}
+  .loader-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+  }
+  @media all and (display-mode: fullscreen) {
+   
+    table {
+        width: 100%;
+    }
+  }
+  
+  
+  @media screen and (max-width: 960px) {
+    .mat-table {
+      border: 0;
+      vertical-align: middle;
+     
+      
+    }
+  
+    .mat-table caption {
+      font-size: 2em;
+      
+    }
+   
+    
+     
+    .mat-table .mat-header-cell {
+      
+      border: 10px solid;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      padding: 0 ;
+      position: absolute;
+      width: 1px;
+    }
+   
+    .mat-table .mat-row {
+      border-bottom: 5px solid #ddd;
+      display: block;
+      font-weight: bolder;
+      padding-left: 24px;
+    }
+    /*
+    .mat-table .mat-row:nth-child(even) {background: #CCC}
+    .mat-table .mat-row:nth-child(odd) {background: #FFF}
+    */
+    .mat-table .mat-cell {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: 1em;
+      text-align: right;
+      font-weight:normal;
+      height:30px;
+      margin-bottom: 4%;
+      padding-left: 0%;
+      padding-right: 24px;
+    }
+    .mat-table .mat-cell:before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      text-transform: uppercase;
+      font-weight: bolder;
+      text-align: justify;
+      
+      font-size: .85em;
+    }
+    .mat-table .mat-cell:last-child {
+      border-bottom: 0;
+    }
+      .mat-table .mat-cell:first-child {
+      margin-top: 4%;
+    }
+  }

@@ -1,0 +1,386 @@
+[{
+    "LayoutID": "generic_bank_carrier",
+    "Version": "1.0",
+    "Height": "297",
+    "ImagePath": "../../assets/carrierId1.png",
+	 "CatlogId":"carrierId1",
+	 "carrierId":"carrierId1",
+    "Width": "210",
+    "FlexiFields": [
+       {
+          "Name": "IssuerContact",
+          "Angle": "0",
+          "PageNumber": "1",
+          "Value": "somebank Card Service Postfach 131415 Stuttgart fone: 0815 124-375841 fax: 0815\n                123-456789 bank:o)Verein@somebank.de",
+          "Height": "80",
+          "Width": "60",
+          "Left": "140",
+          "Top": "62",
+          "Coordinate":"1805,783,2453,1060" 
+       },
+       {
+          "Name": "TitleSubject",
+          "Angle": "0",
+          "PageNumber": "1",
+          "Value": "Your new bank:o)Verein credit card No. 1234 XXXX XXXX 3456",
+          "Height": "8",
+          "Width": "120",
+          "Left": "22",
+          "Top": "108",
+          "Coordinate": "224,1325,1788,1463"
+       },
+       {
+          "Name": "Salutation",
+          "Angle": "0",
+          "PageNumber": "1",
+          "Value": "Dear Mister",
+          "Height": "5",
+          "Width": "40",
+          "Left": "22",
+          "Top": "120",
+          "Coordinate":"263,1491,890,1583"
+       },
+       {
+          "Name": "TextBlock1",
+          "Angle": "0",
+          "PageNumber": "1",
+          "Value": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod\n                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero\n                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n                takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n                consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n                dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo\n                dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem\n                ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed\n                diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam\n                voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd\n                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel\n                eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum\n                dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim\n                qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla\n                facilisi. Lorem ipsum dolor sit amet.",
+          "Height": "75",
+          "Width": "170",
+          "Left": "22",
+          "Top": "128",
+          "Coordinate": "243,1616,2499,2190"
+       },
+       {
+          "Name": "TextBlockClosing",
+          "Angle": "0",
+          "PageNumber": "1",
+          "Value": "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd\n                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+          "Height": "8",
+          "Width": "170",
+          "Left": "22",
+          "Top": "204",
+          "Coordinate": ""
+       },
+       {
+          "Name": "Greeting",
+          "Angle": "0",
+          "PageNumber": "1",
+          "Value": "With kind regards",
+          "Height": "6",
+          "Width": "50",
+          "Left": "22",
+          "Top": "213",
+          "Coordinate": ""
+       },
+       {
+          "Name": "Signature",
+          "Angle": "0",
+          "PageNumber": "1",
+          "Value": "Your bank:o)Verein",
+          "Height": "6",
+          "Width": "42",
+          "Left": "22",
+          "Top": "222",
+          "Coordinate": ""
+       },
+       {
+          "Name": "Notification",
+          "Angle": "0",
+          "PageNumber": "1",
+          "Value": "Note: Dolor in hendrerit in vulputate velit esse molestie consequat, vel illum\n                dolore eu feugiat nulla facilisis at vero eros et accumsan:\n                lorem-ipsum-dolor.sit-amet.com",
+          "Height": "28",
+          "Width": "80",
+          "Left": "22",
+          "Top": "248",
+          "Coordinate": ""
+       },
+       {
+          "Name": "Reminder",
+          "Angle": "0",
+          "PageNumber": "1",
+          "Value": "At vero eos et accusam et justo",
+          "Height": "7",
+          "Width": "38",
+          "Left": "120",
+          "Top": "269",
+          "Coordinate":  ""
+       },
+       {
+          "Name": "Reminder",
+          "Angle": "0",
+          "PageNumber": "1",
+          "Value": "duo dolores",
+          "Height": "7",
+          "Width": "15",
+          "Left": "157",
+          "Top": "269",
+          "Coordinate":""
+       },
+       {
+          "Name": "REminder",
+          "Angle": "0",
+          "PageNumber": "1",
+          "Value": "et ea rebum.",
+          "Height": "7",
+          "Width": "15",
+          "Left": "172",
+          "Top": "269",
+          "Coordinate":""    
+       }
+    ]
+ },
+ {
+	"LayoutID": "generic_bank_carrier",
+    "Version": "1.0",
+    "Height": "297",
+    "ImagePath": "../../assets/carrierId2.jpg",
+	"CatlogId":"carrierId2",
+	"carrierId":"carrierId2",
+    "Width": "210",
+    "FlexiFields": [
+      {
+        "Name": "Address1",
+        "Angle": "0",
+        "PageNumber": "1",
+        "Value": "27 Manchester road, Lausaka , ZAMBIA, 7th feb, 2009",
+        "Coordinate":"200,219,1392,373"
+     },
+     {
+        "Name": "Address12",
+        "Angle": "0",
+        "PageNumber": "1",
+        "Value": "The Country Director, DG Investments, P.O. Box 33377E"
+       
+     },
+     {
+        "Name": "Section1",
+        "Angle": "0",
+        "PageNumber": "1",
+        "Value": "I am applying for the postion of sales exexutive which was advertised in the gurdien newpape dated 6th ..... exlent clothing sales"
+       
+     },
+     {
+        "Name": "Section2",
+        "Angle": "0",
+        "PageNumber": "1",
+        "Value": "I recently graduated from the copperbelt university with a diploma in marketing.....useul to your company"
+       
+     },
+     {
+        "Name": "Section3",
+        "Angle": "0",
+        "PageNumber": "1",
+        "Value": "I am very social person and my cheerful disposition has made it easy from me.....enclosed CV"
+        
+     },
+     {
+        "Name": "Section4",
+        "Angle": "0",
+        "PageNumber": "1",
+        "Value": "I am looking forward to meet you as soon as I am considered...09223311"
+       
+     },
+    
+     {
+        "Name": "signature",
+        "Angle": "0",
+        "PageNumber": "1",
+        "Value": "George Mapenzi"
+     }
+  ]
+ },
+ {
+	"LayoutID": "generic_bank_carrier",
+    "Version": "1.0",
+    "Height": "297",
+    "ImagePath": "../../assets/carrierId2.png",
+	"CatlogId":"carrierId3",
+	"carrierId":"carrierId3",
+    "Width": "210",
+    "FlexiFields": [
+      {
+         "Name": "IssuerContact",
+         "Angle": "0",
+         "PageNumber": "1",
+         "Value": "somebank Card Service Postfach 131415 Stuttgart fone: 0815 124-375841 fax: 0815\n                123-456789 bank:o)Verein@somebank.de",
+         "Height": "80",
+         "Width": "60",
+         "Left": "140",
+         "Top": "62",
+         "Coordinate": "827,366,1181,838"
+      },
+      {
+         "Name": "TitleSubject",
+         "Angle": "0",
+         "PageNumber": "1",
+         "Value": "Your new bank:o)Verein credit card No. 1234 XXXX XXXX 3456",
+         "Height": "8",
+         "Width": "120",
+         "Left": "22",
+         "Top": "108",
+         "Coordinate": "130,638,839,685"
+      },
+      {
+         "Name": "Salutation",
+         "Angle": "0",
+         "PageNumber": "1",
+         "Value": "Dear Mister",
+         "Height": "5",
+         "Width": "40",
+         "Left": "22",
+         "Top": "120",
+         "Coordinate":"130,709,366,739"
+      },
+      {
+         "Name": "TextBlock1",
+         "Angle": "0",
+         "PageNumber": "1",
+         "Value": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod\n                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero\n                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n                takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n                consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n                dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo\n                dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem\n                ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed\n                diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam\n                voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd\n                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel\n                eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum\n                dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim\n                qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla\n                facilisi. Lorem ipsum dolor sit amet.",
+         "Height": "75",
+         "Width": "170",
+         "Left": "22",
+         "Top": "128",
+         "Coordinate": "130,756,1134,1199"
+      },
+      {
+         "Name": "TextBlockClosing",
+         "Angle": "0",
+         "PageNumber": "1",
+         "Value": "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd\n                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+         "Height": "8",
+         "Width": "170",
+         "Left": "22",
+         "Top": "204",
+         "Coordinate": "130,1205,1134,1252"
+      },
+      {
+         "Name": "Greeting",
+         "Angle": "0",
+         "PageNumber": "1",
+         "Value": "With kind regards",
+         "Height": "6",
+         "Width": "50",
+         "Left": "22",
+         "Top": "213",
+         "Coordinate": "130,1258,425,1293"
+      },
+      {
+         "Name": "Signature",
+         "Angle": "0",
+         "PageNumber": "1",
+         "Value": "Your bank:o)Verein",
+         "Height": "6",
+         "Width": "42",
+         "Left": "22",
+         "Top": "222",
+         "Coordinate": "130,1311,378,1346"
+      },
+      {
+         "Name": "Notification",
+         "Angle": "0",
+         "PageNumber": "1",
+         "Value": "Note: Dolor in hendrerit in vulputate velit esse molestie consequat, vel illum\n                dolore eu feugiat nulla facilisis at vero eros et accumsan:\n                lorem-ipsum-dolor.sit-amet.com",
+         "Height": "28",
+         "Width": "80",
+         "Left": "22",
+         "Top": "248",
+         "Coordinate": "130,1465,602,1630"
+      },
+      {
+         "Name": "Reminder",
+         "Angle": "0",
+         "PageNumber": "1",
+         "Value": "At vero eos et accusam et justo",
+         "Height": "7",
+         "Width": "38",
+         "Left": "120",
+         "Top": "269",
+         "Coordinate":  "709,1589,933,1630"
+      },
+      {
+         "Name": "Reminder",
+         "Angle": "0",
+         "PageNumber": "1",
+         "Value": "duo dolores",
+         "Height": "7",
+         "Width": "15",
+         "Left": "157",
+         "Top": "269",
+         "Coordinate":"927,1589,1016,1630"
+      },
+      {
+         "Name": "REminder",
+         "Angle": "0",
+         "PageNumber": "1",
+         "Value": "et ea rebum.",
+         "Height": "7",
+         "Width": "15",
+         "Left": "172",
+         "Top": "269",
+         "Coordinate":"1016,1589,1105,1630"    
+      }
+   ]
+ },
+ {
+	"LayoutID": "generic_bank_carrier",
+    "Version": "1.0",
+    "Height": "297",
+	"CatlogId":"carrierId4",
+	"carrierId":"carrierId4",
+    "Width": "210",
+    "FlexiFields": [
+      {
+        "Name": "Address1",
+        "Angle": "0",
+        "PageNumber": "1",
+        "Value": "27 Manchester road, Lausaka , ZAMBIA, 7th feb, 2009",
+        "Coordinate": "130,1311,378,1346"
+     },
+     {
+        "Name": "Address12",
+        "Angle": "0",
+        "PageNumber": "1",
+        "Value": "The Country Director, DG Investments, P.O. Box 33377E",
+        "Coordinate":"130,709,366,739"
+     },
+     {
+        "Name": "Section1",
+        "Angle": "0",
+        "PageNumber": "1",
+        "Value": "I am applying for the postion of sales exexutive which was advertised in the gurdien newpape dated 6th ..... exlent clothing sales",
+        "Coordinate": "130,1311,378,1346"
+     },
+     {
+        "Name": "Section2",
+        "Angle": "0",
+        "PageNumber": "1",
+        "Value": "I recently graduated from the copperbelt university with a diploma in marketing.....useul to your company",
+        "Coordinate": "130,756,1134,1199"
+     },
+     {
+        "Name": "Section3",
+        "Angle": "0",
+        "PageNumber": "1",
+        "Value": "I am very social person and my cheerful disposition has made it easy from me.....enclosed CV",
+        "Coordinate": "130,1205,1134,1252"
+     },
+     {
+        "Name": "Section4",
+        "Angle": "0",
+        "PageNumber": "1",
+        "Value": "I am looking forward to meet you as soon as I am considered...09223311",
+        "Coordinate": "130,1258,425,1293"
+     },
+    
+     {
+        "Name": "signature",
+        "Angle": "0",
+        "PageNumber": "1",
+        "Value": "George Mapenzi",
+        "Coordinate": "130,1465,602,1630"
+     }
+    
+  ]
+ }
+ ]

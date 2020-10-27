@@ -1,23 +1,13 @@
-<!-- <mat-card class="card"> -->
-<!-- <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
-    <h1>User List</h1>
-</mat-card-title> -->
-<!-- <mat-card-content> -->
-<div fxLayout="row" style="margin-top: 16px;">
+<div class="container">
     <div fxFlex="60">
-        <h1 style="margin-top: 5px; margin-left: 12px;"> Carrier List</h1>
-        <div class="example-container mat-elevation-z8" style="margin-left: 12px;">
-
+        <h1 style="margin-top: 5px; margin-top: 16px; margin-left: 28px;"> Carrier List</h1>
+        <div class="example-container mat-elevation-z8" style="margin-left: 28px;">
             <mat-spinner *ngIf="loading" [diameter]="40"></mat-spinner>
-            <table mat-table [dataSource]="dataSource" style="cursor: pointer;">
-                <!-- <ng-container matColumnDef="carrierId">
-                    <mat-header-cell *matHeaderCellDef> Carrier Id </mat-header-cell>
-                    <mat-cell *matCellDef="let row" data-label="Carrier Id"> {{row.carrierId}} </mat-cell>
-                </ng-container> -->
+            <table mat-table [dataSource]="dataSource" style="cursor: pointer; width: 100%; ">
                 <ng-container matColumnDef="carrierTitle">
                     <mat-header-cell *matHeaderCellDef> Carrier Title </mat-header-cell>
                     <mat-cell *matCellDef="let row" data-label="Carrier Title"> {{row.carrierTitle}} &nbsp;
-                        <mat-icon *ngIf="row.lock" class="icon green-icon">
+                        <mat-icon *ngIf="row.lock" class="icon red-icon">
                             lock
                         </mat-icon>
                     </mat-cell>
@@ -38,7 +28,7 @@
                 <ng-container matColumnDef="currentState">
                     <mat-header-cell *matHeaderCellDef> Current State </mat-header-cell>
                     <mat-cell *matCellDef="let row" data-label="Current State"
-                        [ngStyle]="{'color':row.currentState === 'Active' ? 'green' : 'blue' }">
+                        [ngStyle]="{'color':row.currentState === 'Active' ? 'green' : 'red' }">
                         {{row.currentState}} </mat-cell>
                 </ng-container>
                 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
@@ -47,31 +37,18 @@
             </table>
         </div>
     </div>
-    <div fxFlex="40" fxLayoutAlign="space-around end">
-        <div class="content" fxLayout="row wrap">
-            <!-- <div fxFlex="100%"> -->
-            <mat-card class="mat-elevation-z4">
-                <mat-card-header>
-                    <mat-card-title>Instant Preview
-
-                    </mat-card-title>
-                    <button style="float: right; margin-bottom: 1em;" mat-stroked-button color="primary"
-                        (click)="sendId(selectedRowIndex)"> Edit </button>
-                </mat-card-header>
-
-                <mat-spinner *ngIf="isImageLoading" [diameter]="40"></mat-spinner>
-                <img *ngIf="!isImageLoading" mat-card-image src='{{ "assets/" + selectedRowIndex + ".png" }}'
-                    class="img">
-                <!-- <mat-card-content>
-                        <p>
-                            The Himalayas is a mountain range in Asia.
-                        </p>
-                    </mat-card-content> -->
-                <!-- <mat-card-actions>
-                   
-                </mat-card-actions> -->
-            </mat-card>
-            <!-- </div> -->
-        </div>
+    <div fxFlex="40" fxLayoutAlign="space-around end" style="margin-top: 30px;">
+        <mat-card class="mat-elevation-z4">
+            <mat-card-header>
+                <mat-card-title>
+                    Instant Preview
+                </mat-card-title>
+                <div fxFlex></div>
+                <button style="float: right; margin-bottom: 1em;" mat-stroked-button color="primary"
+                    (click)="sendId(selectedRowIndex)"> Edit </button>
+            </mat-card-header>
+            <mat-spinner *ngIf="isImageLoading" [diameter]="40"></mat-spinner>
+            <img *ngIf="!isImageLoading" mat-card-image src='{{ "assets/" + selectedRowIndex + ".png" }}' class="img">
+        </mat-card>
     </div>
 </div>

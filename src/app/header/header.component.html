@@ -5,18 +5,11 @@
                 <mat-icon class="icon">login</mat-icon>
                 <span class="label">Login</span>
             </a>
-            <!-- <a mat-list-item routerLink="/login" *ngIf="!isAuthenticated">
-                <mat-icon class="icon">input</mat-icon>
-                <span class="label">Login</span>
-            </a> -->
+
             <!-- <a mat-list-item routerLink="/carriers">
                 <mat-icon class="icon">dashboard</mat-icon>
-                <span class="label">Feedback</span>
-            </a> -->
-            <a mat-list-item routerLink="/carriers">
-                <mat-icon class="icon">dashboard</mat-icon>
                 <span class="label">Card Carriers</span>
-            </a>
+            </a> -->
             <!-- <a mat-list-item routerLink="/register" *ngIf="!isAuthenticated">
                 <mat-icon class="icon">register</mat-icon>
                 <span class="label">Register</span>
@@ -31,10 +24,7 @@
             </a>
             <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
 
-            <!-- <a mat-list-item type="button" (click)="logout()" *ngIf="isAuthenticated">
-                <mat-icon class="icon">input</mat-icon>
-                <span class="label">LogOut</span>
-            </a> -->
+
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
@@ -55,12 +45,12 @@
                             <span class="label">Login</span>
                         </a>
                     </li> -->
-                    <li>
+                    <!-- <li>
                         <a routerLink="/register" *ngIf="!isAuthenticated">
                             <mat-icon class="icon">input</mat-icon>
                             <span class="label">Register</span>
                         </a>
-                    </li>
+                    </li> -->
                     <li>
                         <a routerLink="/login" *ngIf="!isAuthenticated">
                             <mat-icon class="icon">input</mat-icon>
@@ -68,12 +58,12 @@
                         </a>
                     </li>
 
-                    <li>
+                    <!-- <li>
                         <a routerLink="/carriers" *ngIf="isAuthenticated">
                             <mat-icon class="icon">dashboard</mat-icon>
                             <span class="label">Card Carriers</span>
                         </a>
-                    </li>
+                    </li> -->
                     <!-- (click)="logout()" -->
 
                     <!-- <li>

@@ -20,7 +20,7 @@ const routes: Routes = [
   {
     path: 'carriers',
     component: CarriersComponent,
-    // canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService]
 
   },
   {

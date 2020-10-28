@@ -48,7 +48,8 @@
                     (click)="sendId(selectedRowIndex)"> Edit </button>
             </mat-card-header>
             <mat-spinner *ngIf="isImageLoading" [diameter]="40"></mat-spinner>
-            <img *ngIf="!isImageLoading" mat-card-image src='{{ "assets/" + selectedRowIndex + ".png" }}' class="img">
+            <!-- <img *ngIf="!isImageLoading" mat-card-image src='{{ "assets/" + selectedRowIndex + ".png" }}' class="img"> -->
+            <img *ngIf="!isImageLoading" mat-card-image [src]="transform(selectedRowIndex)" class="img">
         </mat-card>
     </div>
 </div>

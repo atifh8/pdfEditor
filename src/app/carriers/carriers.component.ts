@@ -3,7 +3,8 @@ import { MatTableDataSource } from '@angular/material/table';
 import { CaarierserviceService } from './caarierservice.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router, ActivatedRoute, ParamMap, NavigationExtras } from '@angular/router';
-
+import { DomSanitizer } from '@angular/platform-browser';
+import { images } from './images';
 export interface CardCarriers {
   "carrierId": string;
   "catalogId": string;
@@ -24,6 +25,7 @@ export interface CardCarriers {
 
 
 export class CarriersComponent implements OnInit {
+  base64Img: any;
   isImageLoading = false;
   isFetching: boolean = false;
   selectedRowIndex = 'carrierId1'
@@ -32,7 +34,7 @@ export class CarriersComponent implements OnInit {
   loading: boolean = false;
   dataSource = new MatTableDataSource<CardCarriers>([])
   displayedColumns: string[] = ['carrierTitle', 'modifiedDate', 'modifiedBy', 'version', 'currentState'];
-  constructor(private carrier: CaarierserviceService, private _snackBar: MatSnackBar, private router: Router) {
+  constructor(private sanitizer: DomSanitizer, private carrier: CaarierserviceService, private _snackBar: MatSnackBar, private router: Router) {
 
   }
 
@@ -48,12 +50,19 @@ export class CarriersComponent implements OnInit {
 
   }
   getRecord(row: any) {
-
+    // this.transform(row.carrierId)
     console.log(row)
     this.selectedRowIndex = row.carrierId;
     console.log(row);
 
   }
+  transform(id: any) {
+    if (images.hasOwnProperty(id)) {
+      return this.sanitizer.bypassSecurityTrustResourceUrl(images[id]);
+    }
+  }
+
+
   getCarriersList() {
     this.isFetching = true
     // this.showNotification();

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { CaarierserviceService } from './caarierservice.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Router, ActivatedRoute, ParamMap, NavigationExtras} from '@angular/router';
+import { Router, ActivatedRoute, ParamMap, NavigationExtras } from '@angular/router';
 
 export interface CardCarriers {
   "carrierId": string;
@@ -63,15 +63,17 @@ export class CarriersComponent implements OnInit {
     this.isFetching = false;
   }
   sendId(id: any) {
-    const sendPDFInfo: NavigationExtras = {
-      state: {
-        recordInfo : id
-      }
-    };
 
-    this.router.navigate(['/pdfImage'], sendPDFInfo)
-    .then(success => console.log('navigation success?' , success))
-    .catch(console.error);
+    this.router.navigate(['/carriers/', id]);
+    // const sendPDFInfo: NavigationExtras = {
+    //   state: {
+    //     recordInfo : id
+    //   }
+    // };
+
+    // this.router.navigate(['/pdfImage'], sendPDFInfo)
+    // .then(success => console.log('navigation success?' , success))
+    // .catch(console.error);
   }
 
   showNotification() {

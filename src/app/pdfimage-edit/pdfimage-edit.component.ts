@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import * as data from '../../config/flexiContent.json';
 import { ShowContentDialogComponent } from '../show-content-dialog/show-content-dialog.component';
 
@@ -12,6 +13,7 @@ declare var tinymce: any;
   styleUrls: ['./pdfimage-edit.component.css']
 })
 export class PDFImageEditComponent implements OnInit {
+  id: string;
   flexicontentinfo = data;
   mapCooridinate = [];
   image: any;
@@ -34,37 +36,38 @@ export class PDFImageEditComponent implements OnInit {
     shadowRadius: 10,
   };
 
-  constructor(private router: Router, public dialog: MatDialog) {
+  constructor(private router: Router, public dialog: MatDialog, private actRoute: ActivatedRoute) {
+    this.id = this.actRoute.snapshot.params.id;
     this.loadingImage = true;
     const navigation = this.router.getCurrentNavigation();
     const state = navigation.extras.state as {
-     recordInfo: any;
-  };
+      recordInfo: any;
+    };
 
     setTimeout(() => {
-    this.loadingImage = false;
-    if (state.recordInfo && state.recordInfo !== undefined){
-      this.fetchflexiContentInfo(state.recordInfo);
-    }
-  }, 1000);
+      this.loadingImage = false;
+      if (this.id !== undefined) {
+        this.fetchflexiContentInfo(this.id);
+      }
+    }, 1000);
   }
 
   fetchflexiContentInfo = (catlogId) => {
-    if (this.flexicontentinfo && this.flexicontentinfo.default){
+    if (this.flexicontentinfo && this.flexicontentinfo.default) {
       this.flexicontentinfo.default.map((u, i) => {
-          if (this.flexicontentinfo.default[i].CatlogId === catlogId){
-            if (this.flexicontentinfo && this.flexicontentinfo.default) {
-              this.flexicontentinfo.default[i].FlexiFields.map((u, j) => {
-                this.image = this.flexicontentinfo.default[i].ImagePath;
-                this.mapCooridinate.push({
-                  name: this.flexicontentinfo.default[i].FlexiFields[j].Name,
-                  value: this.flexicontentinfo.default[i].FlexiFields[j].Value,
-                  pageNo: this.flexicontentinfo.default[i].FlexiFields[j].PageNumber,
-                  coordi: this.flexicontentinfo.default[i].FlexiFields[j].Coordinate,
-                });
+        if (this.flexicontentinfo.default[i].CatlogId === catlogId) {
+          if (this.flexicontentinfo && this.flexicontentinfo.default) {
+            this.flexicontentinfo.default[i].FlexiFields.map((u, j) => {
+              this.image = this.flexicontentinfo.default[i].ImagePath;
+              this.mapCooridinate.push({
+                name: this.flexicontentinfo.default[i].FlexiFields[j].Name,
+                value: this.flexicontentinfo.default[i].FlexiFields[j].Value,
+                pageNo: this.flexicontentinfo.default[i].FlexiFields[j].PageNumber,
+                coordi: this.flexicontentinfo.default[i].FlexiFields[j].Coordinate,
               });
-            }
+            });
           }
+        }
       });
     }
   }
@@ -72,7 +75,7 @@ export class PDFImageEditComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  Clicked(e, obj){
+  Clicked(e, obj) {
     this.OriginalContentOfTinymce = obj.value;
     tinymce.init({
       selector: '#mymce1',
@@ -80,7 +83,7 @@ export class PDFImageEditComponent implements OnInit {
       branding: false,
       toolbar_location: 'bottom',
       skin: 'outside',
-      forced_root_block : ' ',
+      forced_root_block: ' ',
       toolbar: 'customInsertButton | customInsertButton1',
       height: 200,
       resize: false,
@@ -88,7 +91,7 @@ export class PDFImageEditComponent implements OnInit {
       menubar: false,
       setup: (editor) => {
         editor.on('init', (e) => {
-          this.openingTinyMce=true;
+          this.openingTinyMce = true;
           console.log('The Editor has initialized.');
           editor.setContent(obj.value);
         });
@@ -101,9 +104,9 @@ export class PDFImageEditComponent implements OnInit {
       activeEditor.setContent(this.OriginalContentOfTinymce);
       activeEditor.ui.registry.addButton('customInsertButton', {
         text: 'Update',
-       // disabled: true,
-       style: 'float: right',
-       directionality: 'rtl',
+        // disabled: true,
+        style: 'float: right',
+        directionality: 'rtl',
         classes: '.tox tox-tbtn__select-label',
         onAction: (e) => {
           this.updateContentOfTinymce = tinymce.get('mymce1').getContent();
@@ -116,7 +119,7 @@ export class PDFImageEditComponent implements OnInit {
   openDialog = () => {
     const dialogRef = this.dialog.open(ShowContentDialogComponent, {
       data: {
-        originalValue:  this.OriginalContentOfTinymce,
+        originalValue: this.OriginalContentOfTinymce,
         updatedValue: this.updateContentOfTinymce
       }
     });

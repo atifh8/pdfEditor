@@ -28,9 +28,15 @@ const routes: Routes = [
     component: RegisterComponent
   },
   {
-    path: 'pdfImage',
-    component: PDFImageEditComponent
+    path: 'carriers/:id',
+    component: PDFImageEditComponent,
+    canActivate: [AuthGuardService]
+
   },
+  // {
+  //   path: 'pdfImage',
+  //   component: PDFImageEditComponent
+  // },
   {
     path: '**',
     component: NotfoundComponent
